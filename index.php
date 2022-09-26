@@ -25,6 +25,8 @@ $altrimentiCiArrabbiamo=new Movie('...altrimenti ci arrabbiamo!','...altrimenti 
 
 $tizio=new Actor('Adamo','Carangi');
 $altrimentiCiArrabbiamo->addActor($tizio->name .' '. $tizio->lastName);
+// $altrimentiCiArrabbiamo->addActor($tizio->name .' '. $tizio->lastName);
+// $altrimentiCiArrabbiamo->addActor($tizio->name .' '. $tizio->lastName);
 
 // BONUS:
 // inserite 4/5 istanze in un array, e ciclatelo per stampare i dati nella
