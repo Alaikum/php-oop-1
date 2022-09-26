@@ -10,6 +10,9 @@
 // vengono istanziati almeno due oggetti ‘Movie’ e stampati a schermo i valori delle relative proprietà
 
 include __DIR__ . '/class/movieClass.php';
+include __DIR__ . '/class/actorClass.php';
+
+
 
 $backToTheFuture=new Movie('Ritorno al futuro','Back to the Future',1985,['Michael J. Fox','Christopher Lloyd']);
 
@@ -20,6 +23,8 @@ $altrimentiCiArrabbiamo=new Movie('...altrimenti ci arrabbiamo!','...altrimenti 
 // var_dump($altrimentiCiArrabbiamo);
 
 
+$tizio=new Actor('Adamo','Carangi');
+$altrimentiCiArrabbiamo->addActor($tizio);
 
 // BONUS:
 // inserite 4/5 istanze in un array, e ciclatelo per stampare i dati nella
@@ -42,20 +47,23 @@ $arrayFilm=[
     $terminator
 ];
 
-var_dump($arrayFilm);
+// var_dump($arrayFilm);
 ?>
 
 <div>
     <h1>Html</h1>
     <?php 
-    foreach($arrayFilm as $cards){
+    foreach($arrayFilm as $ky => $cards){
+   ?>
+     
+     <?php
      
 ?>
 <ul>
     <li>
        <?php foreach( $cards as $key=> $card){
       if($key!='mainCast')echo("$key: $card <br>");
-      else {
+      else { 
        
         foreach($card as $cast){
             echo($cast. "<br>");
