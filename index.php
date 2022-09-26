@@ -54,7 +54,13 @@ var_dump($arrayFilm);
 <ul>
     <li>
        <?php foreach( $cards as $key=> $card){
-      echo("$key: $card <br>");
+      if($key!='mainCast')echo("$key: $card <br>");
+      else {
+       
+        foreach($card as $cast){
+            echo($cast. "<br>");
+        }
+      };
        
         } ?>
     </li>
