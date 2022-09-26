@@ -64,3 +64,19 @@ var_dump($arrayFilm);
     ?> 
     
 </div>
+
+
+<style>
+    div{
+        max-width: 500px;
+        margin: 0 auto;
+    }
+    ul{
+        list-style: none;
+    }
+    li{
+        border: 1px solid salmon;
+        background-color: beige;
+        padding: 5px;
+    }
+</style>
