@@ -5,12 +5,14 @@ class Movie{
     public $language='en';
     public $originalTitle;
     public $year;
-     function __construct($title,$originalTitle,$year,$language='en')
+    public $mainCast=[];
+     function __construct($title,$originalTitle,$year,$mainCast=[],$language='en')
      {
         $this->title=$title;
         $this->originalTitle=$originalTitle;
         $this->setYear($year);
         $this->language=$language;
+        $this->mainCast=$mainCast;
      }
 
      public function setYear($year){
