@@ -24,7 +24,7 @@ $altrimentiCiArrabbiamo=new Movie('...altrimenti ci arrabbiamo!','...altrimenti 
 
 
 $tizio=new Actor('Adamo','Carangi');
-$altrimentiCiArrabbiamo->addActor($tizio);
+$altrimentiCiArrabbiamo->addActor($tizio->name .' '. $tizio->lastName);
 
 // BONUS:
 // inserite 4/5 istanze in un array, e ciclatelo per stampare i dati nella
@@ -61,16 +61,13 @@ $arrayFilm=[
 ?>
 <ul>
     <li>
-       <?php foreach( $cards as $key=> $card){
-      if($key!='mainCast')echo("$key: $card <br>");
-      else { 
-       
-        foreach($card as $cast){
-            echo($cast. "<br>");
-        }
-      };
-       
-        } ?>
+       <?php echo $cards->title.'<br>'.$cards->originalTitle.
+       '<br>'.$cards->language.'<br>'.$cards->year.'<br>'
+       ?>
+       <?php foreach($cards->mainCast as $actors){
+        echo $actors.' ' ;
+       }
+        ?>
     </li>
 </ul>
 <?php

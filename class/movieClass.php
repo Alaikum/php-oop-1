@@ -27,7 +27,8 @@ class Movie
    }
    public function addActor($people)
    {
-      // echo($people);
-     $this->mainCast+=$people->name;
+      // var_dump($people);
+      array_push($this->mainCast, $people);
+   //   $this->mainCast+=$people->name;
    }
 }
